@@ -12,10 +12,11 @@ userForm.addEventListener('submit', e => {
     const textSearchValue = document.getElementById('textSearch').value.toString();
     if (textSearchValue.length > 0){
         gitHub.fetchUser(textSearchValue).then(data => {
-            if(data.message === 'Not Found'){
+            if(data.userData.message === 'Not Found'){
                 ui.showMessage("Usuario no encontrado", "alert alert-danger col-md-12");
             } else {
-                ui.showProfile(data);
+                ui.showProfile(data.userData);
+                ui.showRepositories(data.userRepositories);
             }
         });
     }    

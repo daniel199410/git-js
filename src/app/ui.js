@@ -29,6 +29,27 @@ class UI {
         content.insertBefore(div, profile);
     }
 
+    showRepositories(repositories) {
+        let template = ''
+        repositories.forEach(repository => {
+            template += `
+                <div class = "card card-body mt-2 animated bounceInUp">
+                    <div class = "row">
+                        <div class="col-md-6">
+                            <a href = "${repository.html_url}" target = "_blank">${repository.name}</a>
+                        </div>
+                        <div class="col-md-6">
+                            <span class = "badge badge-primary">${repository.language}</span>
+                            <span class = "badge badge-success">Forks: ${repository.forks_count}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        })
+        
+        const repositoriesDiv = document.getElementById('repositories').innerHTML = template;
+    }
+
     clearMessage(){
         const alert = document.querySelector('.alert');
         if(alert){
