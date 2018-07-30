@@ -1,0 +1,29 @@
+{
+  "name": "git-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel199410/git-js.git"
+  },
+  "keywords": [],
+  "author": "Daniel Cataño Restrepo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniel199410/git-js/issues"
+  },
+  "homepage": "https://github.com/daniel199410/git-js#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "",
+    "webpack-dev-server": "",
+    "html-webpack-plugin": "",
+    "webpack-cli": ""
+  }
+}
