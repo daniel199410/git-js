@@ -4,6 +4,7 @@ class UI {
     }
 
     showProfile(user){
+        this.clearMessage();
         this.profile.innerHTML = `
             <div class="card mt-2 animated bounceInLeft">
                 <img src="${user.avatar_url}" class="card-img-top"/>
@@ -26,6 +27,13 @@ class UI {
         div.classList = cssClass;
         div.appendChild(document.createTextNode(message));
         content.insertBefore(div, profile);
+    }
+
+    clearMessage(){
+        const alert = document.querySelector('.alert');
+        if(alert){
+            alert.remove();
+        }
     }
 }
 
