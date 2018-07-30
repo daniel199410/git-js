@@ -18,6 +18,15 @@ class UI {
             <div>
         `;
     }
+
+    showMessage(message, cssClass){
+        const content = document.querySelector('.row');
+        const profile = document.getElementById("profile");
+        const div = document.createElement('div');
+        div.classList = cssClass;
+        div.appendChild(document.createTextNode(message));
+        content.insertBefore(div, profile);
+    }
 }
 
 export default UI;
